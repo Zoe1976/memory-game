@@ -4,12 +4,104 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    
     <title>memory game</title>
     <link rel="stylesheet" href="css.css">
+    <style> 
+        .image-container { 
+            display: inline-block; /* Display images next to each other */ 
+        } 
+     
+        /* Optional: Add some margin between the images */ 
+        .image-container img { 
+            margin-right: 10px; 
+        } 
+        
+    </style> 
+    
+    <style>
+        /* displays form to bottom of page */
+        .GameO7er{
+          position: fixed;
+          bottom: 0;
+        }
+        </style>
+        
+        <script>
+            function validateForm() {
+              let x = document.forms["subscribe"]["name"].value;
+              if (x == "") {
+                alert("Name must be filled out");
+                return false;
+              }
+            }
+            </script>
+       
+        
 </head>
 <body>
-    <h1>Game Board</h1>
-    <div id="game-board"></div>
-    <script src="main.js"></script>
+  <nav>    
+    <ul class="navigationbar">
+        <li><img src="img/logo.png" id=logo alt="Memory Game Logo" /> </li>
+        <li><a href="index.html"><img src="img/home.gif" alt="red house"/></a></li>
+      
+    </ul>        
+    </nav>
+
+    <h1>MEMORY GAME!</h1>
+
+    <h2>GAME RULES</h2>
+    <br>
+    <h2> 1. Flip a card and match the pair of animals.</h2>
+    <br>
+    <h2> 2. You only get 2 goes before the cards reset.</h2>
+    <br>
+    <h2> 3. The game is complete when all cards are matched. </h2>
+    <br>
+
+    <div class="grid-container">
+      <figure>
+          <img src="img/correct.png" alt="correct match of pig cards">
+          
+      </figure>
+      <figure>
+          <img src="img/check.gif" alt="green tick" height 50%>
+          
+      </figure>
+      <figure>
+          <img src="img/incorrect.png" alt="incorrect match of giraffe and donkey cards">
+         
+      </figure>
+      <figure>
+          <img src="img/x.gif" alt="red cross" height 50%>
+         
+      </figure>
+      <br>
+      <br>
+    </div>
+    <div class="button-container">
+    
+    <a href="game.html">
+      <button>LET'S PLAY!</button>
+    </a>
+    </div>
+    
+    <form method="POST" action="subscription_handler.php" id="Subscribe" onsubmit="return validateForm()"
+        <div class="containerGameO7er" style="bottom: 0px;">
+          
+        
+        <div class="containerGameO7er" style="background-color:white">
+          <input type="text" placeholder="Name" name="name" required>
+          <input type="text" placeholder="Email address" name="mail" required>
+          
+        </div>
+    </div>
+    <div class="containerGameO7er">
+        <input type="submit" value="Subscribe">
+      </div>
+       
+      </form>
 </body>
 </html>
